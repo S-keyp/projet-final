@@ -67,17 +67,9 @@ export default function DishListProvider({ children }) {
 		setDishList([...tempList, newDish])
 	}
 
-	function searchDishList(searchWord){
-		setDishList(
-			dishListCopyState.filter(
-				dish => dish.title.toLowerCase().includes(searchWord.current.value)
-			)
-		)
-	}
-
 	return (
 		<DishListContext.Provider value={{ 
-			dishListState, filterDishes, deleteDish, createOrUpdateDish, searchDishList,
+			dishListState, filterDishes, deleteDish, createOrUpdateDish,
 			addToCart, removeFromCart 
 			}}>
 			{children}
@@ -95,7 +87,7 @@ export function UserContextProvider( { children } ) {
     const [currentUser, setCurrentUser] = useState()
 
     return (
-        <UserContext>
+        <UserContext value={{ currentUser }}>
             { children }
         </UserContext>
     )

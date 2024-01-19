@@ -1,4 +1,4 @@
-import './Dish.css';
+import './DishAuth.css';
 import { Link } from "react-router-dom";
 
 function DishAuth({ dish, onDeleteDish }) {
@@ -8,15 +8,17 @@ function DishAuth({ dish, onDeleteDish }) {
 			{/* <img src={dish.dishImg} /> */}
 
 			<h4>Name:</h4>
-			<Link to={`/dishpage/${dish.id}`}>{dish.name}</Link>
+			{dish.name}
 
-			<h4>Ingredients:</h4>
+			<h4>Origin:</h4>
+			{dish.cuisine}
+
+			<h4>Meal types:</h4>
 			<ul>
-				{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
+				{dish.mealType.map((meal, index) => <li key={index}>{meal}</li>)}
 			</ul>
 
 			
-			{/* To be displayed only if connected */}
 			<div className="dish-updater">
 				<button>
 					<Link to={`/dishform/${dish.id}/update`}>Update</Link>
