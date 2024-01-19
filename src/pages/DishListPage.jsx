@@ -21,7 +21,7 @@ function DishListPage() {
 		<>
 			<div className="">
 				<h1>Dish list:</h1>
-				<div className="book-list">
+				<div className="dish-list">
 					{
 						dishListState &&
 						dishListState.map(dish => <Dish key={dish.id} dish={dish} onDeleteDish={deleteDish}/>)

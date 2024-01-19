@@ -1,6 +1,13 @@
-.HeaderNavigation {}
+.site-navigation {
+    height: 50px;
+}
 
-ul.navigation{
+.site-navigation__logo {
+    float: left;
+}
+
+.site-navigation ul{
+    float: right;
     list-style: none;
     display: flex;
     gap: 24px;

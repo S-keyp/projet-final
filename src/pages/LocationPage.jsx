@@ -9,8 +9,8 @@ export default function LocationPage() {
 			<div className="section company-info">
 
 
-				<section class="section">
-					<h2 class="section__subtitle">Exceptional Service</h2>
+				<section className="section">
+					<h2 className="section__subtitle">Exceptional Service</h2>
 					<div className="company-info-adress">
 						<h5>Location</h5>
 						<p>
@@ -32,42 +32,42 @@ export default function LocationPage() {
 					</div>
 				</section>
 
-				<section class="section">
-					<h2 class="section__subtitle">Hours of Operation</h2>
-					<p class="section__paragraph">
+				<section className="section">
+					<h2 className="section__subtitle">Hours of Operation</h2>
+					<p className="section__paragraph">
 						Monday to Friday: 11:00 AM - 10:00 PM
 						Saturday and Sunday: 12:00 PM - 11:00 PM
 					</p>
 				</section>
 
-				<section class="section">
-					<h2 class="section__subtitle">Reservation</h2>
-					<p class="section__paragraph">
+				<section className="section">
+					<h2 className="section__subtitle">Reservation</h2>
+					<p className="section__paragraph">
 						For reservations, please call us or use our online reservation system. We recommend booking in advance to ensure availability.
 					</p>
 				</section>
 				
-				<section class="section">
-					<h2 class="section__subtitle">Connect With Us</h2>
-					<p class="section__paragraph">
+				<section className="section">
+					<h2 className="section__subtitle">Connect With Us</h2>
+					<p className="section__paragraph">
 						Stay connected with Gourmet Fusion Bistro on social media for the latest updates, special promotions, and behind-the-scenes glimpses of our culinary creations.
 					</p>
-					<ul class="section__list">
+					<ul className="section__list">
 						<li>Facebook 📘</li>
 						<li>Instagram 📸</li>
 						<li>Twitter 🐦</li>
 					</ul>
 				</section>
 
-				<section class="section">
-					<h2 class="section__subtitle">Feedback</h2>
-					<p class="section__paragraph">
+				<section className="section">
+					<h2 className="section__subtitle">Feedback</h2>
+					<p className="section__paragraph">
 						We value your feedback! If you have any comments, suggestions, or inquiries, please feel free to reach out to us. Your satisfaction is our priority.
 					</p>
 				</section>
 			</div>
 
-			<MapContainer style={{ height: "300px", width: "100vw" }} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+			<MapContainer style={{ height: "300px", width: "100%" }} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

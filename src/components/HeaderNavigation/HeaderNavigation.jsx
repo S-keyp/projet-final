@@ -18,29 +18,29 @@ import NotFound from './../../pages/NotFound'
 
 
 
-const HeaderNav = () => (
-	<ul className="navigation">
-		<li>
-			<Link to="/">Logo</Link>
-		</li>
-		<li>
-			<Link to="/presentation">Presentation</Link>
-		</li>
-		<li>
-			<Link to="/menu">Menu</Link>
-		</li>
-		<li>
-			<Link to="/location">Location</Link>
-		</li>
-	</ul>
+const Nav = () => (
+	<nav className="site-navigation">
+		<Link className="site-navigation__logo" to="/">Logo</Link>
+		<ul>
+			<li>
+				<Link to="/presentation">Presentation</Link>
+			</li>
+			<li>
+				<Link to="/menu">Menu</Link>
+			</li>
+			<li>
+				<Link to="/location">Location</Link>
+			</li>
+		</ul>
+	</nav>
 );
 
 
 function HeaderNavigation() {
 	return (
-		<div className="HeaderNavigation">
+		<div className="main">
 			<Router>
-				<HeaderNav />
+				<Nav />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
 					<Route path="/presentation" element={<PresentationPage />} />
@@ -48,7 +48,7 @@ function HeaderNavigation() {
 					<Route path="/location" element={<LocationPage />} />
 					{/* <Route path="/map" element={<BookListPage />} /> */}
 
-					
+
 
 					<Route path="*" element={<NotFound />} />
 
