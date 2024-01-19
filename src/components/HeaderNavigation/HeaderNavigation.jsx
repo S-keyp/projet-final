@@ -20,7 +20,7 @@ import NotFound from './../../pages/NotFound'
 const HeaderNav = () => (
 	<ul className="navigation">
 		<li>
-			<Link to="/">Homepage</Link>
+			<Link to="/">Logo</Link>
 		</li>
 		<li>
 			<Link to="/presentation">Presentation</Link>

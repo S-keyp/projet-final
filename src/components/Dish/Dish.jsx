@@ -17,21 +17,6 @@ function Dish({ dish, onDeleteDish }) {
 
 			
 			<button>Add +</button>
-
-			{/* To be displayed only if connected */}
-			<div className="dish-updater">
-				<button>
-					<Link to={`/dishform/${dish.id}/update`}>Update</Link>
-				</button>
-
-				{
-					!!onDeleteDish && (
-						<button onClick={() => {
-							onDeleteDish(dish)
-						}}>Delete</button>
-					)
-				}
-			</div>
 		</div>
 	)
 };

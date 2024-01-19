@@ -84,3 +84,19 @@ export default function DishListProvider({ children }) {
 		</DishListContext.Provider>
 	)
 }
+
+import { createContext, useState, useEffect } from "react";
+import { auth } from '../../../firebase.config'
+
+export const UserContext = createContext()
+
+export function UserContextProvider( { children } ) {
+
+    const [currentUser, setCurrentUser] = useState()
+
+    return (
+        <UserContext>
+            { children }
+        </UserContext>
+    )
+} 

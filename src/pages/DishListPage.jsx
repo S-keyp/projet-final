@@ -13,37 +13,19 @@ function DishListPage() {
 		searchDishList(searchWord)
 	}
 	
+	// Celle-ci doit lister sous forme de grille les plats proposés par le restaurant: chaque cellule doit comporter l'image de la recette, un titre, la liste des ingrédients et un bouton pour ajouter au panier (pas besoin pour ce TP de solution de paiement)
+	// Le client doit pouvoir consulter le panier à tout moment
+	// Sur la page de commande, l'utilisateur doit renseigner ses coordonnées de livraison avant de pouvoir valider son panier
+	// Une fois le panier validé, vous afficher une page de confirmation avec un message indiquant que la commande est en préparation
 	return (
 		<>
 			<div className="">
 				<h1>Dish list:</h1>
-				<div className="">
-					<div className="">
-						Sort by author:
-						<span>
-							<button onClick={()=> {
-								filterDishes(1)
-							}}>ASC</button>
-
-							<button onClick={()=> {
-								filterDishes(-1)
-							}}>DESC</button>
-						</span>
-					</div>
-
-					<div className="">
-						<label htmlFor="dishtitle">Search for a book title:</label>
-						<input id="dishtitle" name="dishtitle" defaultValue={searchWord.current} ref={searchWord} onChange={()=> handleInputChange()} type="text" />
-					</div>
-
-					<Link to={'/bookform'}>
-						<button className="add-book">Ajouter un livre</button>
-					</Link>
-				</div>
 				<div className="book-list">
 					{
 						dishListState &&
-						dishListState.map(dish => <Dish key={dish.id} dish={dish} onDeleteDish={deleteDish}/>)}
+						dishListState.map(dish => <Dish key={dish.id} dish={dish} onDeleteDish={deleteDish}/>)
+					}
 				</div>
 			</div>
 		</>
