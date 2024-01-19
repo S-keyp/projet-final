@@ -1,14 +1,25 @@
 import { recipes } from '../../db.json';
 import { useEffect, useState } from 'react';
 import { createContext } from 'react';
+import { useFetchData } from '../hooks';
 
 
 export const DishListContext = createContext()
 
 export default function DishListProvider({ children }) {
-		
-	const [dishListState, setDishList] = useState(recipes);
-	const [dishListCopyState, setDishListCopyState] = useState(recipes)
+
+
+	const { data } = useFetchData('https://dummyjson.com/recipes');
+	console.log(data)
+	debugger
+	
+	const [dishListState, setDishList] = useState([]);
+	const [dishListCopyState, setDishListCopyState] = useState([])
+
+
+	useEffect(() => {
+		setListStateAndListCopyState(data, data)
+	}, [data])
 
 
 	function setListStateAndListCopyState(val1, val2) {

@@ -1,5 +1,18 @@
 import React from 'react';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Link,
+} from "react-router-dom";
 import './HeaderNavigation.css';
+
+import Homepage from './../../pages/Homepage'
+import DishPage from './../../pages/DishPage'
+import DishListPage from './../../pages/DishListPage'
+import CreateDishPage from './../../pages/CreateDishPage'
+import UpdateDishPage from './../../pages/UpdateDishPage'
+import NotFound from './../../pages/NotFound'
 
 
 
@@ -25,16 +38,16 @@ function HeaderNavigation() {
 				<HeaderNav />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
-					<Route path="/map" element={<BookListPage />} />
+					<Route path="/menu" element={<DishListPage />} />
+					{/* <Route path="/map" element={<BookListPage />} /> */}
 
 					<Route path="*" element={<NotFound />} />
 
 
 					{/* privé après connexion  */}
-					<Route path="/dish/:id" element={<BookPage />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/create-dish" element={<CreateBookPage />} />
-					<Route path="/dish/:id/update" element={<UpadateBookPage />} />
+					<Route path="/dish/:id" element={<DishPage />} />
+					<Route path="/create-dish" element={<CreateDishPage />} />
+					<Route path="/dish/:id/update" element={<UpdateDishPage />} />
 				</Routes>
 			</Router>
 		</div>

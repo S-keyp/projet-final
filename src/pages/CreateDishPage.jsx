@@ -1,6 +1,6 @@
-import BookForm from './../components/BookForm/BookForm'
+import BookForm from '../components/DishForm/DishForm'
 
-function CreateBookPage() {
+function CreateDishPage() {
 	let book = {
 		"title":null,
 		"summary": null,
@@ -22,4 +22,4 @@ function CreateBookPage() {
 
 }
 
-export default CreateBookPage;
+export default CreateDishPage;
