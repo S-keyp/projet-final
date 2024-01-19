@@ -1,16 +1,17 @@
 import { useState } from 'react'
+import DishListProvider from './model/utils/context'
+import HeaderNavigation from './components/HeaderNavigation/HeaderNavigation'
 import './App.css'
 
 function App() {
-	const [count, setCount] = useState(0)
 
 	return (
 		<>
-			<BookListProvider>
+			<DishListProvider>
 
 				<HeaderNavigation />
 
-			</BookListProvider>
+			</DishListProvider>
 		</>
 	)
 }
