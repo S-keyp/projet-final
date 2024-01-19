@@ -1,4 +1,3 @@
-import { recipes } from '../../db.json';
 import { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import { useFetchData } from '../hooks';
@@ -7,8 +6,7 @@ import { useFetchData } from '../hooks';
 export const DishListContext = createContext()
 
 export default function DishListProvider({ children }) {
-
-
+	
 	const { data } = useFetchData('https://dummyjson.com/recipes');
 	
 	const [dishListState, setDishList] = useState([]);
@@ -77,7 +75,6 @@ export default function DishListProvider({ children }) {
 	)
 }
 
-import { createContext, useState, useEffect } from "react";
 import { auth } from '../../../firebase.config'
 
 export const UserContext = createContext()

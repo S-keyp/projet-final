@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import DishListProvider from './model/utils/context'
 import UserContextProvider from './model/utils/context'
 import HeaderNavigation from './components/HeaderNavigation/HeaderNavigation'
@@ -9,11 +8,13 @@ function App() {
 	return (
 		<>
 			<UserContextProvider>
+
 				<DishListProvider>
 
 					<HeaderNavigation />
 
 				</DishListProvider>
+
 			</UserContextProvider>
 		</>
 	)

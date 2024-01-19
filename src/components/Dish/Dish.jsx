@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 function Dish({ dish, onDeleteDish }) {
 
 	return (
-		<div className="Dish">
-			<img src={dish.image} />
+		<div className="dish-card">
+			<img className="dish-card__thumbnail" src={dish.image} />
 
-			<h4>Name:</h4>
-			<Link to={`/dishpage/${dish.id}`}>{dish.name}</Link>
+			<h5 className='dish-card__title'>
+				Name: <br />
+				<Link to={`/dishpage/${dish.id}`}>{dish.name}</Link>
+			</h5>
 
-			<h4>Ingredients:</h4>
-			<ul>
+			<h5>Ingredients:</h5>
+			<ul className='dish-card__list'>
 				{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
 			</ul>
+
 			{/* todo add to cart */}
-			<button>Add +</button>
+			<button className='dish-card__action'>Add +</button>
 		</div>
 	)
 };
