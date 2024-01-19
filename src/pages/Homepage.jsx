@@ -2,7 +2,7 @@
 
 function Homepage() {
   return <div className="homepage">
-    <h2>Welcome to the library</h2>
+    <h2>Welcome to our restaurant !</h2>
   </div>
 };
 

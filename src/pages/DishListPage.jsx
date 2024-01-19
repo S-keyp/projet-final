@@ -43,7 +43,7 @@ function DishListPage() {
 				<div className="book-list">
 					{
 						dishListState &&
-						dishListState.map(dish => <Dish key={dish.id} dish={dish} onDeleteDish={deleteDish}/>)}
+						dishListState.map(dish => <Dish key={dish.id.toString()} dish={dish} onDeleteDish={deleteDish}/>)}
 				</div>
 			</div>
 		</>

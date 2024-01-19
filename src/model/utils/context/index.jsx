@@ -10,15 +10,13 @@ export default function DishListProvider({ children }) {
 
 
 	const { data } = useFetchData('https://dummyjson.com/recipes');
-	console.log(data)
-	debugger
 	
 	const [dishListState, setDishList] = useState([]);
 	const [dishListCopyState, setDishListCopyState] = useState([])
 
 
 	useEffect(() => {
-		setListStateAndListCopyState(data, data)
+		setListStateAndListCopyState(data.recipes, data.recipes)
 	}, [data])
 
 

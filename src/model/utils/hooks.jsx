@@ -26,5 +26,6 @@ export function useFetchData(url = "") {
     getDishes();
   }, []);
 
+
   return { data, loading };
 }

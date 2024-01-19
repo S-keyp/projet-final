@@ -5,14 +5,15 @@ function Dish({ dish, onDeleteDish }) {
 
 	return (
 		<div className="Dish">
-			<img src={dish.dishImg} />
+			{/* <img src={dish.dishImg} /> */}
 
-			<h4>title:</h4>
-			<Link to={`/dishpage/${dish.id}`}>{dish.title}</Link>
+			<h4>Name:</h4>
+			<Link to={`/dishpage/${dish.id}`}>{dish.name}</Link>
 
-			<h4>Summary:</h4>
-			{dish.summary}
-
+			<h4>Ingredients:</h4>
+			<ul>
+				{dish.ingredients.map((ingredient) => <li>{ingredient}</li>)}
+			</ul>
 			{/* <h4>Author:</h4>
 			<Profile profile={dish.profile} /> */}
 
