@@ -1,11 +1,28 @@
 #root {
-  max-width: 1380px;
+  width: 1280px;
   margin: 0 auto;
   text-align: center;
   font-size: 1.15rem;
 }
 
-.section {
-  max-width: 80%;
-  margin: 48px auto;
+
+/* TODO: find somewhere to place those */
+
+/* GENERAL */
+
+/* DISHES */
+.dish-list {
+  display: flex;
+  flex-flow: wrap column;
+  height: 780vh;
+  gap: 12px;
+}
+
+.dish-list .dish-card {
+  max-width: 370px;
+  transition: transform 0.2s linear;
+}
+
+.dish-list .dish-card:hover {
+  transform: scale(.98);
 }

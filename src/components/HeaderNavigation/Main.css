@@ -1,0 +1,28 @@
+.site-navigation {
+    height: 50px;
+}
+
+.site-navigation__logo {
+    float: left;
+}
+
+.site-navigation ul {
+    float: right;
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.header {
+    background: url('/public/header-wallpaper-1.jpg') bottom / cover fixed no-repeat;
+    filter: contrast(50%);
+}
+
+.header__title {
+    padding: 12.5vh;
+    color: #f9fafd;
+}
+
+.section {
+    margin: 48px auto;
+}

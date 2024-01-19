@@ -5,16 +5,16 @@ import {
 	Route,
 	Link,
 } from "react-router-dom";
-import './HeaderNavigation.css';
+import './Main.css';
 
-import Homepage from './../../pages/Homepage'
-import PresentationPage from './../../pages/PresentationPage'
-import LocationPage from './../../pages/LocationPage'
-import DishPage from './../../pages/DishPage'
-import DishListPage from './../../pages/DishListPage'
-import CreateDishPage from './../../pages/CreateDishPage'
-import UpdateDishPage from './../../pages/UpdateDishPage'
-import NotFound from './../../pages/NotFound'
+import Homepage from '../../pages/Homepage'
+import PresentationPage from '../../pages/PresentationPage'
+import LocationPage from '../../pages/LocationPage'
+import DishPage from '../../pages/DishPage'
+import DishListPage from '../../pages/DishListPage'
+import CreateDishPage from '../../pages/CreateDishPage'
+import UpdateDishPage from '../../pages/UpdateDishPage'
+import NotFound from '../../pages/NotFound'
 
 
 
@@ -36,7 +36,7 @@ const Nav = () => (
 );
 
 
-function HeaderNavigation() {
+function Main() {
 	return (
 		<div className="main">
 			<Router>
@@ -58,9 +58,12 @@ function HeaderNavigation() {
 					<Route path="/create-dish" element={<CreateDishPage />} />
 					<Route path="/dish/:id/update" element={<UpdateDishPage />} />
 				</Routes>
+
+
+				<footer></footer>
 			</Router>
 		</div>
 	)
 };
 
-export default HeaderNavigation;
+export default Main;

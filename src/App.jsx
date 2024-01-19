@@ -1,6 +1,6 @@
 import DishListProvider from './model/utils/context'
 import UserContextProvider from './model/utils/context'
-import HeaderNavigation from './components/HeaderNavigation/HeaderNavigation'
+import Main from './components/HeaderNavigation/Main'
 import './App.css'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
 				<DishListProvider>
 
-					<HeaderNavigation />
+					<Main />
 
 				</DishListProvider>
 
