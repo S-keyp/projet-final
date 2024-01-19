@@ -14,9 +14,6 @@ const HeaderNav = () => (
 		<li>
 			<Link to="/localisation">Localisation</Link>
 		</li>
-		<li>
-			<Link to="/connexion">Connexion</Link>
-		</li>
 	</ul>
 );
 
