@@ -12,14 +12,13 @@ function Dish({ dish, onDeleteDish }) {
 
 			<h4>Ingredients:</h4>
 			<ul>
-				{dish.ingredients.map((ingredient) => <li>{ingredient}</li>)}
+				{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
 			</ul>
-			{/* <h4>Author:</h4>
-			<Profile profile={dish.profile} /> */}
 
-			{/* <h4>DishData:</h4>
-			<DishData data={dish.data} /> */}
+			
+			<button>Add +</button>
 
+			{/* To be displayed only if connected */}
 			<div className="dish-updater">
 				<button>
 					<Link to={`/dishform/${dish.id}/update`}>Update</Link>

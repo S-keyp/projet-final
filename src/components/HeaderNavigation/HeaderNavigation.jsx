@@ -8,6 +8,7 @@ import {
 import './HeaderNavigation.css';
 
 import Homepage from './../../pages/Homepage'
+import PresentationPage from './../../pages/PresentationPage'
 import DishPage from './../../pages/DishPage'
 import DishListPage from './../../pages/DishListPage'
 import CreateDishPage from './../../pages/CreateDishPage'
@@ -20,6 +21,9 @@ const HeaderNav = () => (
 	<ul className="navigation">
 		<li>
 			<Link to="/">Homepage</Link>
+		</li>
+		<li>
+			<Link to="/presentation">Presentation</Link>
 		</li>
 		<li>
 			<Link to="/menu">Menu</Link>
@@ -38,8 +42,11 @@ function HeaderNavigation() {
 				<HeaderNav />
 				<Routes>
 					<Route path="/" element={<Homepage />} />
+					<Route path="/presentation" element={<PresentationPage />} />
 					<Route path="/menu" element={<DishListPage />} />
 					{/* <Route path="/map" element={<BookListPage />} /> */}
+
+					
 
 					<Route path="*" element={<NotFound />} />
 

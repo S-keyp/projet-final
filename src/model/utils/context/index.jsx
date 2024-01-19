@@ -13,6 +13,7 @@ export default function DishListProvider({ children }) {
 	
 	const [dishListState, setDishList] = useState([]);
 	const [dishListCopyState, setDishListCopyState] = useState([])
+	const [cart, setCart] = useState([]);
 
 
 	useEffect(() => {
@@ -25,6 +26,16 @@ export default function DishListProvider({ children }) {
 		setDishListCopyState(val2)
 	}
 
+	// CART
+	function addToCart(dish){
+		setCart([...cart, dish]);
+	}
+
+	function removeFromCart(dish){
+		setCart(cart.filter(cartDish => dish.id === cartDish.id));
+	}
+
+	//DISHLIST
 	function filterDishes(ord) {
 		setListStateAndListCopyState(
 			dishListState.toSorted(
@@ -65,7 +76,10 @@ export default function DishListProvider({ children }) {
 	}
 
 	return (
-		<DishListContext.Provider value={{ dishListState, filterDishes, deleteDish, createOrUpdateDish, searchDishList }}>
+		<DishListContext.Provider value={{ 
+			dishListState, filterDishes, deleteDish, createOrUpdateDish, searchDishList,
+			addToCart, removeFromCart 
+			}}>
 			{children}
 		</DishListContext.Provider>
 	)
