@@ -5,13 +5,9 @@ import { DishListContext } from '../model/utils/context/DishListContext';
 
 
 function DishListPage() {
-	const { dishListState, filterDishes, deleteDish, searchDishList } = useContext(DishListContext)
+	const { dishListState, deleteDish } = useContext(DishListContext)
 
-	let searchWord = useRef('')
 
-	function handleInputChange() {
-		searchDishList(searchWord)
-	}
 
 	// Celle-ci doit lister sous forme de grille les plats proposés par le restaurant: chaque cellule doit comporter l'image de la recette, un titre, la liste des ingrédients et un bouton pour ajouter au panier (pas besoin pour ce TP de solution de paiement)
 	// Le client doit pouvoir consulter le panier à tout moment
