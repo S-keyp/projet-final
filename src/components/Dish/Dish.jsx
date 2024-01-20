@@ -1,7 +1,7 @@
 import './Dish.css';
 import { Link } from "react-router-dom";
 
-function Dish({ dish, onDeleteDish }) {
+function Dish({ dish }) {
 
 	return (
 		<div className="dish-card">

@@ -1,6 +1,6 @@
 import DishListProvider from './model/utils/context'
 import UserContextProvider from './model/utils/context'
-import Main from './components/HeaderNavigation/Main'
+import Main from './components/Main/Main'
 import './App.css'
 
 function App() {

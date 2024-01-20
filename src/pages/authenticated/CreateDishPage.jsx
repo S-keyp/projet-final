@@ -1,7 +1,7 @@
-import BookForm from '../components/DishForm/DishForm'
+import DishForm from '../../components/DishForm/DishForm'
 
 function CreateDishPage() {
-	let book = {
+	let dish = {
 		"title":null,
 		"summary": null,
 		"data": {
@@ -15,8 +15,8 @@ function CreateDishPage() {
 	}
 
 	return (
-		<div className="create-book-page">
-			<BookForm book={book} />
+		<div className="create-dish-page">
+			<DishForm dish={dish} />
 		</div>
 	)
 
