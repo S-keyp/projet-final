@@ -15,8 +15,8 @@ export default function CartContextProvider({ children }) {
 		console.log('cartState', cartState);
 	}
 
-	function removeFromCart(dish) {
-		setCart(cartState.filter(cartDish => dish.id === cartDish.id));
+	function removeFromCart(index) {
+		setCart(cartState.toSpliced(index, 1));
 	}
 
 
