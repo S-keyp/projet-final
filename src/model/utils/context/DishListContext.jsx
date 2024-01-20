@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { createContext } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import { useFetchData } from '../hooks';
 
 
@@ -74,34 +73,3 @@ export default function DishListProvider({ children }) {
 		</DishListContext.Provider>
 	)
 }
-
-import { auth } from '../../../firebase.config'
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
-
-export const UserContext = createContext()
-
-export function UserContextProvider( { children } ) {
-	
-	const [currentUser, setCurrentUser] = useState()
-    const [loadingData, setLoadingData] = useState(true)
-
-	const signIn = (email, password) => new Promise((resolve, reject) => signInWithEmailAndPassword(auth, email, password)
-        .then(resolve)
-        .catch(reject),
-    );
-
-	useEffect(() => {
-		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-			setCurrentUser(currentUser)
-			setLoadingData(false)
-		})
-
-		return unsubscribe
-	}, [])
-
-    return (
-        <UserContext value={{ currentUser, signIn }}>
-            { !loadingData && children }
-        </UserContext>
-    )
-} 

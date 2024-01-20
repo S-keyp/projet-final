@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import DishForm from '../../components/DishForm/DishForm'
-import { DishListContext } from '../../model/utils/context/index';
+import { DishListContext } from '../../model/utils/context/DishListContext';
 
 function UpdateDishPage() {	
 	const { DishListState } = useContext(DishListContext)

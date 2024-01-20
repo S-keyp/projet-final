@@ -28,6 +28,7 @@ import NotFound from '../../pages/NotFound'
 import { signOut } from "firebase/auth"
 import { auth } from '../../firebase.config'
 import { useNavigate } from 'react-router-dom';
+import SignIn from '../SignIn/SignIn';
 
 
 function Nav() {
@@ -37,23 +38,25 @@ function Nav() {
 		await signOut(auth)
 		navigate("/")
 	}
-	<nav className="site-navigation">
-		<Link className="site-navigation__logo" to="/">Logo</Link>
-		<ul>
-			<li>
-				<Link to="/presentation">Presentation</Link>
-			</li>
-			<li>
-				<Link to="/menu">Menu</Link>
-			</li>
-			<li>
-				<Link to="/location">Location</Link>
-			</li>
-			<button onClick={logOut}>
-				Log out
-			</button>
-		</ul>
-	</nav>
+	return (
+		<nav className="site-navigation">
+			<Link className="site-navigation__logo" to="/">Logo</Link>
+			<ul>
+				<li>
+					<Link to="/presentation">Presentation</Link>
+				</li>
+				<li>
+					<Link to="/menu">Menu</Link>
+				</li>
+				<li>
+					<Link to="/location">Location</Link>
+				</li>
+				<button onClick={logOut}>
+					Log out
+				</button>
+			</ul>
+		</nav>
+	)
 };
 
 
@@ -87,7 +90,9 @@ export default function Main() {
 				</Routes>
 
 
-				<footer></footer>
+				<footer>
+					<SignIn />
+				</footer>
 			</Router>
 		</div>
 	)

@@ -1,7 +1,7 @@
 import { useContext, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import DishAuth from '../../components/DishAuth/DishAuth'
-import { DishListContext } from '../../model/utils/context/index';
+import { DishListContext } from '../../model/utils/context/DishListContext';
 
 
 function DishListPage() {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext, useRef } from "react";
 
-import { DishListContext } from './../../model/utils/context/index';
+import { DishListContext } from '../../model/utils/context/DishListContext';
 
 
 function DishForm({ dish }) {

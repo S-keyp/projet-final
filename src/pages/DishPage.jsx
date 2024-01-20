@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 
 import Dish from "../components/Dish/Dish";
-import { DishListContext } from './../model/utils/context/index';
+import { DishListContext } from '../model/utils/context/DishListContext';
 
 import NotFound from "./NotFound";
 
