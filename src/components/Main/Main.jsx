@@ -7,37 +7,27 @@ import {
 } from "react-router-dom";
 import './Main.css';
 
-import Homepage from '../../pages/Homepage'
-import PresentationPage from '../../pages/PresentationPage'
-import LocationPage from '../../pages/LocationPage'
+import ConnexionBox from '../ConnexionBox/ConnexionBox';
 import DishPage from '../../pages/DishPage'
 import DishListPage from '../../pages/DishListPage'
+import Homepage from '../../pages/Homepage'
+import LocationPage from '../../pages/LocationPage'
+import NotFound from '../../pages/NotFound'
+import PresentationPage from '../../pages/PresentationPage'
 
 
 import BaseAuth from '../../pages/authenticated/BaseAuth';
+import CreateDishPage from '../../pages/authenticated/CreateDishPage'
 import DishAuthPage from '../../pages/DishPage'
 import DishAuthListPage from '../../pages/authenticated/DishListPage'
-import CreateDishPage from '../../pages/authenticated/CreateDishPage'
 import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
 
 
-import NotFound from '../../pages/NotFound'
 
 
-
-import { signOut } from "firebase/auth"
-import { auth } from '../../firebase.config'
-import { useNavigate } from 'react-router-dom';
-import SignIn from '../SignIn/SignIn';
 
 
 function Nav() {
-	const navigate = useNavigate()
-
-	const logOut = async () => {
-		await signOut(auth)
-		navigate("/")
-	}
 	return (
 		<nav className="site-navigation">
 			<Link className="site-navigation__logo" to="/">Logo</Link>
@@ -51,9 +41,6 @@ function Nav() {
 				<li>
 					<Link to="/location">Location</Link>
 				</li>
-				<button onClick={logOut}>
-					Log out
-				</button>
 			</ul>
 		</nav>
 	)
@@ -91,7 +78,7 @@ export default function Main() {
 
 
 				<footer>
-					<SignIn />
+					<ConnexionBox />
 				</footer>
 			</Router>
 		</div>

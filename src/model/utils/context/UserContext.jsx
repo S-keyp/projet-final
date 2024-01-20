@@ -7,14 +7,16 @@ export const UserContext = createContext()
 
 export default function UserContextProvider( { children } ) {
 	
-	const [currentUser, setCurrentUser] = useState()
+	const [user, setCurrentUser] = useState()
     const [loadingData, setLoadingData] = useState(true)
 
-	const signIn = (email, password)  => signInWithEmailAndPassword(auth, email, password)
+	const signIn = (email, password)  => {
+		signInWithEmailAndPassword(auth, email, password).then((e) => console.log('e', e))
+	}
 
 	useEffect(() => {
-		const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-			setCurrentUser(currentUser)
+		const unsubscribe = onAuthStateChanged(auth, (user) => {
+			setCurrentUser(user)
 			setLoadingData(false)
 		})
 
@@ -22,7 +24,7 @@ export default function UserContextProvider( { children } ) {
 	}, [])
 
     return (
-        <UserContext.Provider value={{ currentUser, signIn }}>
+        <UserContext.Provider value={{ user, signIn }}>
             { !loadingData && children }
         </UserContext.Provider>
     )

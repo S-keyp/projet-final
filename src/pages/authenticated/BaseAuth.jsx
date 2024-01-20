@@ -3,9 +3,9 @@ import { UserContext } from "../../model/utils/context/UserContext"
 import { Outlet, useLocation, Navigate } from "react-router-dom";
 
 export default function BaseAuth(){
-    const { currentUser } = useContext(UserContext)
+    const { user } = useContext(UserContext)
 
-    if(!currentUser) return <Navigate to='/' />
+    if(!user) return <Navigate to='/' />
 
     return (
         <div>
