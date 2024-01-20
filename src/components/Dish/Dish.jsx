@@ -1,8 +1,11 @@
 import './Dish.css';
 import { Link } from "react-router-dom";
+import { CartContext } from '../../model/utils/context/CartContext';
+import { useContext } from 'react';
 
-function Dish({ dish }) {
-
+export default function Dish({ dish }) {
+	const { addToCart } = useContext(CartContext)
+	
 	return (
 		<div className="dish-card">
 			<img className="dish-card__thumbnail" src={dish.image} />
@@ -17,10 +20,7 @@ function Dish({ dish }) {
 				{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient}</li>)}
 			</ul>
 
-			{/* todo add to cart */}
-			<button className='dish-card__action'>Add +</button>
+			<button onClick={() => addToCart(dish)} className='dish-card__action'>Add +</button>
 		</div>
 	)
 };
-
-export default Dish;

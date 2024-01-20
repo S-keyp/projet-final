@@ -1,5 +1,16 @@
 .site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 50px;
+    background: var(--green);
+    border-radius: 25px;
+    margin: 24px auto 12px;
+}
+.site-navigation a {
+    display: block;
+    color: var(--light);
+    padding: 0 24px;
 }
 
 .site-navigation__logo {
@@ -7,14 +18,13 @@
 }
 
 .site-navigation ul {
-    float: right;
     list-style: none;
     display: flex;
     gap: 24px;
 }
 
 .header {
-    background: url('/public/header-wallpaper-1.jpg') bottom / cover fixed no-repeat;
+    background: url('/header-wallpaper-1.jpg') bottom / cover fixed no-repeat;
     filter: contrast(50%);
 }
 

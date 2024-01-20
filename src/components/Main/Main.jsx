@@ -1,4 +1,3 @@
-import React from 'react';
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -8,6 +7,7 @@ import {
 import './Main.css';
 
 import ConnexionBox from '../ConnexionBox/ConnexionBox';
+import CartPage from '../../pages/CartPage'
 import DishPage from '../../pages/DishPage'
 import DishListPage from '../../pages/DishListPage'
 import Homepage from '../../pages/Homepage'
@@ -30,7 +30,7 @@ import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
 function Nav() {
 	return (
 		<nav className="site-navigation">
-			<Link className="site-navigation__logo" to="/">Logo</Link>
+			<Link className="site-navigation__logo" to="/">Gourmet Logo</Link>
 			<ul>
 				<li>
 					<Link to="/presentation">Presentation</Link>
@@ -40,6 +40,9 @@ function Nav() {
 				</li>
 				<li>
 					<Link to="/location">Location</Link>
+				</li>
+				<li>
+					<Link to="/cart">Cart 🛒</Link>
 				</li>
 			</ul>
 		</nav>
@@ -61,6 +64,7 @@ export default function Main() {
 					<Route path="/menu" element={<DishListPage />} />
 					<Route path="/location" element={<LocationPage />} />
 					<Route path="/dish/:id" element={<DishPage />} />
+					<Route path='/cart' element={<CartPage />} />
 
 
 

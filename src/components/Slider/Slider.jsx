@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.css";
 
 export default function Slider() {
 	const { dishListState } = useContext(DishListContext)
-	const [ sliderElts, setSliderElts ] = useState()
+	const [ sliderElts, setSliderElts ] = useState([])
 
 	useEffect(() => {
 		setSliderElts(dishListState.slice(0, 5))
@@ -17,7 +17,6 @@ export default function Slider() {
 		<div className="slider-content">
 			<Carousel
 				width="65%"
-				style={{margin: 'auto !important'}}
 				autoPlay={true}
 				interval={3000}
 				infiniteLoop={true}
@@ -26,7 +25,7 @@ export default function Slider() {
 				showStatus={false}
 			>
 				{
-					!!sliderElts &&
+					sliderElts &&
 					sliderElts.map((element, index) => (
 						<div key={index}>
 							<img src={element.image} alt={element.name} />

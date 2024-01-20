@@ -4,12 +4,17 @@
   margin: 0 auto;
   text-align: center;
   font-size: 1.15rem;
+  --green: #0EAD0A;
+  --dark-green: #496B3F;
+  --light: #DFF8D5;
+  --beige: #004C74;
 }
 
 
 /* TODO: find somewhere to place those */
 
 /* GENERAL */
+
 
 /* DISHES */
 .dish-list {
