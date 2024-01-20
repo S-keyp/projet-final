@@ -12,7 +12,6 @@ export default function CartContextProvider({ children }) {
 
 	function addToCart(dish) {
 		setCart([...cartState, dish]);
-		console.log('cartState', cartState);
 	}
 
 	function removeFromCart(index) {
