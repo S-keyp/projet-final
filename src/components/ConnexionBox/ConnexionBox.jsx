@@ -40,8 +40,8 @@ export default function ConnexionBox() {
 			)
 
 			// formRef.current.reset()
-			setValidation("")
-			navigate("/admin/dishlist")
+			// setValidation("")
+			navigate("/admin/administration")
 		} catch (e) {
 			// if(e.code === "auth/invalid-email") {
 			// 	setValidation("Error in email")

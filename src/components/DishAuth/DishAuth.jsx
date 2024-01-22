@@ -4,26 +4,22 @@ import { Link } from "react-router-dom";
 function DishAuth({ dish, onDeleteDish }) {
 
 	return (
-		<div className="Dish">
-			{/* <img src={dish.dishImg} /> */}
-
-			<h4>Name:</h4>
-			{dish.name}
-
-			<h4>Origin:</h4>
-			{dish.cuisine}
-
-			<h4>Meal types:</h4>
-			<ul>
-				{dish.mealType.map((meal, index) => <li key={index}>{meal}</li>)}
-			</ul>
-
-			
-			<div className="dish-updater">
+		<tr className="Dish">
+			<td>
+				{dish.name}
+			</td>
+			<td>
+				{dish.cuisine}
+			</td>
+			<td>
+				{dish.mealType.map((meal, index) => <span key={index}>{meal}</span>)}
+			</td>
+			<td className="dish-updater">
 				<button>
 					<Link to={`/dishform/${dish.id}/update`}>Update</Link>
 				</button>
-
+			</td>
+			<td>
 				{
 					!!onDeleteDish && (
 						<button onClick={() => {
@@ -31,8 +27,8 @@ function DishAuth({ dish, onDeleteDish }) {
 						}}>Delete</button>
 					)
 				}
-			</div>
-		</div>
+			</td>
+		</tr>
 	)
 };
 

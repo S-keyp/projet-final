@@ -53,8 +53,12 @@ export default function DishListProvider({ children }) {
 		setDishList([...tempList, newDish])
 	}
 
+	function getFirstFiveElts () {
+		return dishListState.slice(0, 5)
+	}
+
 	return (
-		<DishListContext.Provider value={{ dishListState, filterDishes, deleteDish, createOrUpdateDish }}>
+		<DishListContext.Provider value={{ dishListState, filterDishes, deleteDish, createOrUpdateDish, getFirstFiveElts }}>
 			{children}
 		</DishListContext.Provider>
 	)

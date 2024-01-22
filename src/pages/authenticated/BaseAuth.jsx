@@ -5,7 +5,12 @@ import { Outlet, useLocation, Navigate } from "react-router-dom";
 export default function BaseAuth(){
     const { user } = useContext(UserContext)
 
-    if(!user) return <Navigate to='/' />
+    setTimeout(() => {
+        if(!user) return <Navigate to='/' />
+    })
+        
+        
+    
 
     return (
         <div>
