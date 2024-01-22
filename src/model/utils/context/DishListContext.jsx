@@ -25,10 +25,10 @@ export default function DishListProvider({ children }) {
 	function filterDishes(ord) {
 		setListStateAndListCopyState(
 			dishListState.toSorted(
-				(firstElt, secondElt) => firstElt.profile.name.localeCompare(secondElt.profile.name) * ord
+				(firstElt, secondElt) => firstElt.name.localeCompare(secondElt.name) * ord
 			),
 			dishListCopyState.toSorted(
-				(firstElt, secondElt) => firstElt.profile.name.localeCompare(secondElt.profile.name) * ord
+				(firstElt, secondElt) => firstElt.name.localeCompare(secondElt.name) * ord
 			)
 		)
 	}

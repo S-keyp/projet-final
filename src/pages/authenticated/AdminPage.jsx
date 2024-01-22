@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import DishAuth from '../../components/DishAuth/DishAuth'
 import { DishListContext } from '../../model/utils/context/DishListContext';
@@ -26,8 +26,8 @@ export default function AdminPage() {
 					</div>
 
 
-					<Link to={'/dishform'}>
-						<button className="add-book">Add a dish</button>
+					<Link to={'/admin/create-dish'}>
+						<button className="add-dish">Add a dish</button>
 					</Link>
 				</div>
 				<table className="dish-list">
@@ -36,6 +36,7 @@ export default function AdminPage() {
 							<th>Name</th>
 							<th>Origin</th>
 							<th>Meal type</th>
+							<th colSpan={2}>Modify</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -3,19 +3,23 @@ import { useNavigate } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
 import { UserContext } from '../../model/utils/context/UserContext';
 import { auth } from '../../firebase.config'
-import { signOut } from "firebase/auth"
 
 
 export default function ConnexionBox() {
 
 	const inputs = useRef([])
 	const [validation, setValidation] = useState("")
-	const { user, signIn } = useContext(UserContext)
+	const { user, signIn, logOut } = useContext(UserContext)
 	const navigate = useNavigate()
 
-	const logOut = async () => {
-		await signOut(auth)
+	function handleLogOut(){
+		logOut()
 		navigate("/")
+	}
+
+	function resetAll() {
+		inputs.current = []
+		console.log(inputs.current)
 	}
 
 	const addInputs = el => {
@@ -39,9 +43,9 @@ export default function ConnexionBox() {
 				inputs.current[1].value
 			)
 
-			// formRef.current.reset()
 			// setValidation("")
-			navigate("/admin/administration")
+			navigate("/admin/home")
+			
 		} catch (e) {
 			// if(e.code === "auth/invalid-email") {
 			// 	setValidation("Error in email")
@@ -49,7 +53,7 @@ export default function ConnexionBox() {
 			setValidation("Error, email or password incorrect")
 		}
 
-
+		resetAll()
 	}
 
 
@@ -100,7 +104,7 @@ export default function ConnexionBox() {
 			}
 			{
 				user && (
-					<button onClick={logOut}>
+					<button onClick={handleLogOut}>
 						Log out
 					</button>
 				)

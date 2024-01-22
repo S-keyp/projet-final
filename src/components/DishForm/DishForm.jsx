@@ -7,41 +7,41 @@ import { DishListContext } from '../../model/utils/context/DishListContext';
 function DishForm({ dish }) {
 
 	const navigate = useNavigate()
-	
-	const { createOrUpdate } = useContext(DishListContext)
-	
-	let title = useRef(book.title)
-	let summary = useRef(book.summary)
-	let publisher = useRef(book.data.publisher)
-	let releaseDate = useRef(book.data.releaseDate)
-	let name = useRef(book.profile.name)
-	let bio = useRef(book.profile.bio)
-	
 
-	function handleSubmit(event){
+	const { createOrUpdateDish } = useContext(DishListContext)
+
+	let name = useRef(dish.name)
+	let ingredients = useRef(dish.ingredients)
+	let publisher = useRef(dish.data.publisher)
+	let releaseDate = useRef(dish.data.releaseDate)
+	// let name = useRef(dish.profile.name)
+	let bio = useRef(dish.profile.bio)
+
+
+	function handleSubmit(event) {
 
 		event.preventDefault()
-		
-		book.title = title.current.value
-		book.summary = summary.current.value
-		book.data.publisher = publisher.current.value
-		book.data.releaseDate = releaseDate.current.value
-		book.profile.name = name.current.value
-		book.profile.bio = bio.current.value
 
-    createOrUpdate(book)
+		dish.name = name.current.value
+		dish.ingredients = ingredients.current.value
+		dish.data.publisher = publisher.current.value
+		dish.data.releaseDate = releaseDate.current.value
+		dish.profile.name = name.current.value
+		dish.profile.bio = bio.current.value
+
+		createOrUpdateDish(dish)
 	}
 
 	return (
-		<form className="create-book">
+		<form className="create-dish">
 			<div>
-				<label htmlFor="title">Title:</label>
-				<input defaultValue={title.current} ref={title} id="title" name="title" type="text" />
+				<label htmlFor="name">Title:</label>
+				<input defaultValue={name.current} ref={name} id="name" name="name" type="text" />
 			</div>
 
 			<div>
-				<label htmlFor="summary">Summary:</label>
-				<input defaultValue={summary.current} ref={summary} id="summary" name="summary" type="text" />
+				<label htmlFor="ingredients">Summary:</label>
+				<input defaultValue={ingredients.current} ref={ingredients} id="ingredients" name="ingredients" type="text" />
 			</div>
 
 			<div>
@@ -66,7 +66,7 @@ function DishForm({ dish }) {
 
 			<button onClick={() => {
 				handleSubmit(event)
-				navigate('/booklistpage')
+				navigate('/admin/administration')
 			}} type="submit">Envoyer</button>
 
 		</form>

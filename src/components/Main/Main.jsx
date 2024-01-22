@@ -69,14 +69,14 @@ export default function Main() {
 
 
 					<Route path='/admin' element={<BaseAuth />} >
-						<Route path='/admin/administration' element={<AdminPage />} />
+						<Route path='/admin/home' element={<AdminPage />} />
 						<Route path='/admin//dish/:id' element={<DishAuthPage />} />
-						<Route path="admin/create-dish" element={<CreateDishPage />} />
-						<Route path="admin/dish/:id/update" element={<UpdateDishPage />} />
+						<Route path="/admin/create-dish" element={<CreateDishPage />} />
+						<Route path="/admin/dish/:id/update" element={<UpdateDishPage />} />
 					</Route>
 
 
-					{/* <Route path="*" element={<NotFound />} /> */}
+					<Route path="*" element={<NotFound />} />
 
 				</Routes>
 
