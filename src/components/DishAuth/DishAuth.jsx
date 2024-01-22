@@ -6,18 +6,13 @@ function DishAuth({ dish, onDeleteDish }) {
 	return (
 		<tr className="Dish">
 			<td>
-				{dish.name}
+				<Link to={`/admin/dish/${dish.id}/update`}>{dish.name}</Link>
 			</td>
 			<td>
 				{dish.cuisine}
 			</td>
 			<td>
 				{dish.mealType.map((meal, index) => <span key={index}>{meal}</span>)}
-			</td>
-			<td className="dish-updater">
-				<button>
-					<Link to={`/dishform/${dish.id}/update`}>Update</Link>
-				</button>
 			</td>
 			<td>
 				{

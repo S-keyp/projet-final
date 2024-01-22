@@ -36,7 +36,7 @@ export default function AdminPage() {
 							<th>Name</th>
 							<th>Origin</th>
 							<th>Meal type</th>
-							<th colSpan={2}>Modify</th>
+							<th>Remove</th>
 						</tr>
 					</thead>
 					<tbody>

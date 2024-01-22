@@ -1,18 +1,18 @@
 import DishForm from '../../components/DishForm/DishForm'
 
-function CreateDishPage() {
+export default function CreateDishPage() {
 	let dish = {
-		"title":null,
-		"summary": null,
-		"data": {
-			"publisher": null,
-			"releaseDate": null,
-		},
-		"profile": {
-			"name": null,
-			"bio": null,
-		}
+		"name":null,
+		"instructions": null,
+		"prepTimeMinutes": null,
+		"cookTimeMinutes": null,
+		"servings": null,
+		"difficulty": null,
+		"cuisine": null,
 	}
+
+
+	console.log(dish)
 
 	return (
 		<div className="create-dish-page">
@@ -21,5 +21,3 @@ function CreateDishPage() {
 	)
 
 }
-
-export default CreateDishPage;

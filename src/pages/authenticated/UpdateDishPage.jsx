@@ -3,11 +3,11 @@ import { useContext, useState } from "react";
 import DishForm from '../../components/DishForm/DishForm'
 import { DishListContext } from '../../model/utils/context/DishListContext';
 
-function UpdateDishPage() {	
-	const { DishListState } = useContext(DishListContext)
+export default function UpdateDishPage() {	
+	const { dishListState } = useContext(DishListContext)
 	const id = Number(useParams().id)
 	
-	const [dish, setDish] = useState(DishListState.find(dish => dish.id === id));
+	const [dish, setDish] = useState(dishListState.find(dish => dish.id === id));
 
 	return (
 		<div className="update-dish-page">
@@ -16,5 +16,3 @@ function UpdateDishPage() {
 	)
 
 }
-
-export default UpdateDishPage;

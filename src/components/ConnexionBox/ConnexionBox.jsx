@@ -12,7 +12,7 @@ export default function ConnexionBox() {
 	const { user, signIn, logOut } = useContext(UserContext)
 	const navigate = useNavigate()
 
-	function handleLogOut(){
+	function handleLogOut() {
 		logOut()
 		navigate("/")
 	}
@@ -45,7 +45,7 @@ export default function ConnexionBox() {
 
 			// setValidation("")
 			navigate("/admin/home")
-			
+
 		} catch (e) {
 			// if(e.code === "auth/invalid-email") {
 			// 	setValidation("Error in email")
@@ -58,48 +58,49 @@ export default function ConnexionBox() {
 
 
 	return (
-		<div className="ConnexionBox">
+		<div className="connexion-box">
 			{
 				!!!user && (
-					<div className="sign-in">
-						<form
-							ref={formRef}
-							onSubmit={handleForm}
-							className=''
-						>
-							<div className="sign-in-field">
-								<label htmlFor="signInEmail">
-									Email
-								</label>
-								<input
-									ref={addInputs}
-									name='email'
-									required
-									type='email'
-									className=''
-									id='signUpEmail'
-								/>
-							</div>
+					<form
+						ref={formRef}
+						onSubmit={handleForm}
+						className=''
+					>
+						<div className="sign-in-field">
+							<label htmlFor="signInEmail">
+								Email
+							</label>
+							<input
+								ref={addInputs}
+								name='email'
+								required
+								type='email'
+								className=''
+								id='signUpEmail'
+							/>
+						</div>
 
-							<div className="sign-in-field">
-								<label htmlFor="signInPwd">
-									Password
-								</label>
-								<input
-									ref={addInputs}
-									name='pwd'
-									required
-									type='passwrod'
-									className=''
-									id='signUpPwd'
-								/>
-							</div>
+						<div className="sign-in-field">
+							<label htmlFor="signInPwd">
+								Password
+							</label>
+							<input
+								ref={addInputs}
+								name='pwd'
+								required
+								type='passwrod'
+								className=''
+								id='signUpPwd'
+							/>
+						</div>
 
-							<p>{validation}</p>
-							<button type='submit'>Send</button>
-						</form>
-
-					</div>
+						{
+							validation !== "" && (
+								<p>{validation}</p>
+							)
+						}
+						<button type='submit'>Send</button>
+					</form>
 				)
 			}
 			{
