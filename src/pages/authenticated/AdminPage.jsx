@@ -30,7 +30,7 @@ export default function AdminPage() {
 						<button className="add-dish">Add a dish</button>
 					</Link>
 				</div>
-				<table className="dish-list">
+				<table className="">
 					<thead>
 						<tr>
 							<th>Name</th>

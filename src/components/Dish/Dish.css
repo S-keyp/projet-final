@@ -13,11 +13,3 @@
 .dish-card__title {
     font-weight: bolder;
 }
-
-.dish-card__list {
-    list-style: none;
-}
-
-.dish-card__action {
-    list-style: none;
-}

@@ -21,6 +21,7 @@ import CreateDishPage from '../../pages/authenticated/CreateDishPage'
 import DishAuthPage from '../../pages/DishPage'
 import AdminPage from '../../pages/authenticated/AdminPage'
 import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
+import Sitemap from "../../pages/Sitemap";
 
 
 
@@ -65,6 +66,7 @@ export default function Main() {
 					<Route path="/location" element={<LocationPage />} />
 					<Route path="/dish/:id" element={<DishPage />} />
 					<Route path='/cart' element={<CartPage />} />
+					<Route path='/sitemap' element={<Sitemap />} />
 
 
 
@@ -81,8 +83,26 @@ export default function Main() {
 				</Routes>
 
 
-				<footer>
-					<ConnexionBox />
+				<footer className="footer">
+					<ul>
+						<li>
+							<Link to="/presentation">Presentation</Link>
+						</li>
+						<li>
+							<Link to="/menu">Menu</Link>
+						</li>
+						<li>
+							<Link to="/location">Location</Link>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<Link to="/sitemap">Sitemap</Link>
+						</li>
+						<li>
+							<ConnexionBox />
+						</li>
+					</ul>
 				</footer>
 			</Router>
 		</div>
