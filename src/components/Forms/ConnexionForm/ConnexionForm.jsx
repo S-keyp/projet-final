@@ -62,12 +62,11 @@ export default function ConnexionForm() {
 					<form
 						ref={formRef}
 						onSubmit={handleForm}
-						className=''
 					>
 						<div className="sign-in-field">
 							<label htmlFor="signInEmail">
 								Email
-							</label>
+							</label><br/>
 							<input
 								ref={addInputs}
 								name='email'
@@ -81,7 +80,7 @@ export default function ConnexionForm() {
 						<div className="sign-in-field">
 							<label htmlFor="signInPwd">
 								Password
-							</label>
+							</label><br/>
 							<input
 								ref={addInputs}
 								name='pwd'

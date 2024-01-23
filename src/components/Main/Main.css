@@ -90,6 +90,21 @@ a.site-navigation__logo:hover svg{
     padding-left: 80px;
 }
 
+.cta {
+    margin: 36px auto;
+}
+
+.cta-logo{
+    background-color: var(--green);
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
 .section {
     margin: 48px auto;
 }
@@ -97,7 +112,18 @@ a.site-navigation__logo:hover svg{
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 450px;
     align-items: center;
+    background: url('footer-background.png') center /cover no-repeat ;
+    height: 400px;
+    margin-bottom: 24px;
+}
+.footer ul li {
+    margin: 24px 0;
+}
+
+.specific-links a {
+    color: var(--black)
 }
 

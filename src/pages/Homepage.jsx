@@ -31,8 +31,8 @@ export default function Homepage() {
 
 			<Slider />
 
-			<button>
-				<Link to='/cart'>To cart</Link>
+			<button className="cta">
+				<Link to='/cart'>To cart <span className="cta-logo">+</span></Link>
 			</button>
 		</div>
 	)

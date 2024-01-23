@@ -114,7 +114,7 @@ export default function Main() {
 							<Link to="/location">Location</Link>
 						</li>
 					</ul>
-					<ul>
+					<ul className="specific-links">
 						<li>
 							<Link to="/sitemap">Sitemap</Link>
 						</li>
