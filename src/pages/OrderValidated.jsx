@@ -1,16 +1,20 @@
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 export default function OrderValidated () {
+    
     const navigate = useNavigate()
-
-    setTimeout(() => {
-        navigate('/')
-    }, 4500)
+    useEffect(() =>{
+        setTimeout(() => {
+            navigate('/')
+        }, 4500)
+    },[])
+    
 
     return (
         <>
-            <h2>Your order has been validated !</h2>
-            <p>You will soon be redirected to the homepage</p>
+            <h2>Thanks for your order !</h2>
+            <p>Everything is validated and you will soon be redirected to the homepage</p>
         </>
     )
 }
