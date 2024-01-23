@@ -12,6 +12,12 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --light: #f9fafd;
+  --orange: #C7831E;
+  --green: #236504;
+  --light-black: #656667;
+  --black: #333435;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
