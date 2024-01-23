@@ -11,13 +11,10 @@ export default function OrderValidationForm() {
 		formState: { errors },
 	} = useForm()
 
+	const navigate = useNavigate()
 	const onSubmit = (data) => {
 		navigate('/order-validation')
 	}
-
-	const navigate = useNavigate()
-
-
 
 
 	return (
@@ -28,6 +25,7 @@ export default function OrderValidationForm() {
 			{errors.name && errors.name.type === "required" && (
 				<span role="alert">This field is required</span>
 			)}
+			
 			<label htmlFor="surname">Surname:</label>
 			<input name='surname' defaultValue="Doe" {...register("surname", { required: true })} />
 			{errors.surname && errors.surname.type === "required" && (

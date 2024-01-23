@@ -10,8 +10,6 @@ export default function DishForm({ dish }) {
 
 	const { createOrUpdateDish } = useContext(DishListContext)
 
-	console.log(dish)
-
 	let name = useRef(dish.name)
 	let ingredients = useRef(dish.ingredients)
 	let prepTimeMinutes = useRef(dish.prepTimeMinutes)
@@ -35,8 +33,6 @@ export default function DishForm({ dish }) {
 		dish.cuisine = cuisine.current.value
 		dish.mealType = mealType.current.value.split(',')
 		
-		console.log(dish.ingredients)
-
 		createOrUpdateDish(dish)
 	}
 

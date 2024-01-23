@@ -1,7 +1,8 @@
 import { useContext } from "react";
+import { DishListContext } from '../../model/utils/context/DishListContext';
+
 import { Link } from "react-router-dom";
 import DishAuth from '../../components/DishAuth/DishAuth'
-import { DishListContext } from '../../model/utils/context/DishListContext';
 
 
 export default function AdminPage() {
@@ -44,7 +45,6 @@ export default function AdminPage() {
 							dishListState &&
 							dishListState.map(dish => <DishAuth key={dish.id} dish={dish} onDeleteDish={deleteDish} />)
 						}
-
 					</tbody>
 				</table>
 			</div>

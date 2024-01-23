@@ -15,6 +15,12 @@ export default function Sitemap(){
             <li>
                 <Link to="/cart">Cart 🛒</Link>
             </li>
+            <li>
+                <Link to="/order-validation">Order validation</Link>
+            </li>
+            <li>
+                <Link to="/not-found">Order validation</Link>
+            </li>
         </ul>
     )
 }

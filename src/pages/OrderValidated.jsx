@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
+
 export default function OrderValidated () {
     
     const navigate = useNavigate()
@@ -9,7 +10,6 @@ export default function OrderValidated () {
             navigate('/')
         }, 4500)
     },[])
-    
 
     return (
         <>

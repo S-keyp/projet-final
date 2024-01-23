@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Dish from "../components/Dish/Dish";
 import { DishListContext } from '../model/utils/context/DishListContext';
@@ -8,12 +8,25 @@ import NotFound from "./NotFound";
 
 function DishPage() {
 	const id = Number(useParams().id)
-	const { DishListState } = useContext(DishListContext)
+	const { dishListState } = useContext(DishListContext)
+	const [dish, setDish] = useState()
 
-	let dish = DishListState.find(dish => dish.id == id)
+	useEffect(() => {
+		if(dishListState) setDish(dishListState.find(dish => dish.id == id))
+	}, [dishListState])
 
-	if (!dish) return <NotFound />
-	else return <Dish dish={dish} />
+	return (
+		<>
+			{
+				dishListState &&
+					dish ? (
+					<Dish dish={dish} />
+				) : (
+					<NotFound />
+				)
+			}
+		</>
+	)
 }
 
 export default DishPage;

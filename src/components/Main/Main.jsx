@@ -13,20 +13,20 @@ import DishListPage from '../../pages/DishListPage'
 import Homepage from '../../pages/Homepage'
 import LocationPage from '../../pages/LocationPage'
 import NotFound from '../../pages/NotFound'
+import OrderValidated from "../../pages/OrderValidated";
 import PresentationPage from '../../pages/PresentationPage'
 
 
+import AdminPage from '../../pages/authenticated/AdminPage'
 import BaseAuth from '../../pages/authenticated/BaseAuth';
 import CreateDishPage from '../../pages/authenticated/CreateDishPage'
 import DishAuthPage from '../../pages/DishPage'
-import AdminPage from '../../pages/authenticated/AdminPage'
-import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
 import Sitemap from "../../pages/Sitemap";
+import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
 
 
 import { UserContext } from "../../model/utils/context/UserContext";
 import { useContext } from "react";
-import OrderValidated from "../../pages/OrderValidated";
 
 
 
@@ -82,7 +82,6 @@ export default function Main() {
 					<Route path='/cart' element={<CartPage />} />
 					<Route path='/sitemap' element={<Sitemap />} />
 					<Route path='/order-validation' element={<OrderValidated />} />
-
 
 
 					<Route path='/admin' element={<BaseAuth />} >

@@ -5,7 +5,6 @@ import { UserContext } from '../../../model/utils/context/UserContext';
 
 
 export default function ConnexionForm() {
-
 	const inputs = useRef([])
 	const [validation, setValidation] = useState("")
 	const { user, signIn, logOut } = useContext(UserContext)

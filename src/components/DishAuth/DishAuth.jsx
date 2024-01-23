@@ -1,8 +1,8 @@
 import './DishAuth.css';
 import { Link } from "react-router-dom";
 
-function DishAuth({ dish, onDeleteDish }) {
 
+export default function DishAuth({ dish, onDeleteDish }) {
 	return (
 		<tr className="Dish">
 			<td>
@@ -26,5 +26,3 @@ function DishAuth({ dish, onDeleteDish }) {
 		</tr>
 	)
 };
-
-export default DishAuth;

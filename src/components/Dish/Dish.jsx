@@ -1,7 +1,8 @@
 import './Dish.css';
-import { Link } from "react-router-dom";
-import { CartContext } from '../../model/utils/context/CartContext';
 import { useContext } from 'react';
+import { CartContext } from '../../model/utils/context/CartContext';
+
+import { Link } from "react-router-dom";
 
 export default function Dish({ dish }) {
 	const { addToCart } = useContext(CartContext)
@@ -12,7 +13,7 @@ export default function Dish({ dish }) {
 
 			<h5 className='dish-card__title'>
 				Name: <br />
-				<Link to={`/dishpage/${dish.id}`}>{dish.name}</Link>
+				<Link to={`/dish/${dish.id}`}>{dish.name}</Link>
 			</h5>
 
 			<h5>Ingredients:</h5>

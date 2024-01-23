@@ -1,5 +1,6 @@
 import DishForm from '../../components/Forms/DishForm/DishForm'
 
+
 export default function CreateDishPage() {
 	let dish = {
 		"name":null,
@@ -13,12 +14,9 @@ export default function CreateDishPage() {
 	}
 
 
-	console.log(dish)
-
 	return (
 		<div className="create-dish-page">
 			<DishForm dish={dish} />
 		</div>
 	)
-
 }

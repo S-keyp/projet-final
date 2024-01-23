@@ -1,15 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 
-
 export default function LocationPage() {
 	return (
 		<>
 			<header className="header">
 				<h1 className="header__title">Contact Gourmet Fusion Bistro</h1>
 			</header>
-
-
 
 			<section className="section">
 				<h2 className="section__subtitle">Exceptional Service</h2>
