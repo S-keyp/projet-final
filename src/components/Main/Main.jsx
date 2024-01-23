@@ -24,11 +24,15 @@ import UpdateDishPage from '../../pages/authenticated/UpdateDishPage'
 import Sitemap from "../../pages/Sitemap";
 
 
-
+import { UserContext } from "../../model/utils/context/UserContext";
+import { useContext } from "react";
 
 
 
 function Nav() {
+
+	const { user } = useContext(UserContext)
+
 	return (
 		<nav className="site-navigation">
 			<Link className="site-navigation__logo" to="/">Gourmet Logo</Link>
@@ -45,6 +49,15 @@ function Nav() {
 				<li>
 					<Link to="/cart">Cart 🛒</Link>
 				</li>
+				{ user && (
+					<li>
+							Administration
+						<ul>
+							<li><Link to="/admin/home">Stock</Link></li>
+							<li><Link to="/admin/create-dish">Add a dish</Link></li>
+						</ul>
+					</li>
+				)}
 			</ul>
 		</nav>
 	)
