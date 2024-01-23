@@ -9,8 +9,8 @@ export default function LocationPage() {
 			</header>
 
 			<section className="section">
-				<h2 className="section__subtitle">Exceptional Service</h2>
-				<div className="company-info-adress">
+				<h3 className="section__subtitle">Exceptional Service</h3>
+				<div className="section__paragraph company-info-adress">
 					<h5>Location</h5>
 					<p>
 						📍 123 Culinary Street
@@ -18,7 +18,7 @@ export default function LocationPage() {
 						Zip Code: 12345
 					</p>
 				</div>
-				<div className="company-info-contact">
+				<div className="section__paragraph company-info-contact">
 					<p>
 						Phone
 						<a href="tel:+33612345678">📞 (555) 123-4567</a>
@@ -32,7 +32,7 @@ export default function LocationPage() {
 			</section>
 
 			<section className="section">
-				<h2 className="section__subtitle">Hours of Operation</h2>
+				<h3 className="section__subtitle">Hours of Operation</h3>
 				<p className="section__paragraph">
 					Monday to Friday: 11:00 AM - 10:00 PM
 					Saturday and Sunday: 12:00 PM - 11:00 PM
@@ -40,7 +40,7 @@ export default function LocationPage() {
 			</section>
 
 			<section className="section">
-				<h2 className="section__subtitle">Reservation</h2>
+				<h3 className="section__subtitle">Reservation</h3>
 				<p className="section__paragraph">
 					For reservations, please call us or use our online reservation system. We recommend booking in advance to ensure availability.
 				</p>
@@ -65,17 +65,19 @@ export default function LocationPage() {
 				</p>
 			</section>
 
-			<MapContainer style={{ height: "300px", width: "100%" }} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-				<TileLayer
-					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-				/>
-				<Marker position={[51.505, -0.09]}>
-					<Popup>
-						We are here !
-					</Popup>
-				</Marker>
-			</MapContainer>
+			<section className="section">
+				<MapContainer style={{ height: "300px", width: "100%" }} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+					<TileLayer
+						attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					/>
+					<Marker position={[51.505, -0.09]}>
+						<Popup>
+							We are here !
+						</Popup>
+					</Marker>
+				</MapContainer>
+			</section>
 		</>
 	)
 };

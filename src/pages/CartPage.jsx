@@ -11,7 +11,10 @@ export default function CartPage() {
 
 			{cartState &&
 				cartState.length == 0 ? (
-				<p>There is nothig to display in your cart, start adding some in the <Link to='/menu'>menu page</Link> !</p>
+				<section className="section">
+					<h3 className="section__subtitle">There is nothig to display in your cart</h3>
+					<p className="section__paragraph">Start adding some in the <Link to='/menu'>menu page</Link> !</p>
+				</section>
 			) : (
 				<>
 					<div className="cart">
