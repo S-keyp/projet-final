@@ -8,8 +8,37 @@
 
 .dish-card__thumbnail {
     width: 100%;
+    clip-path: circle(75.3% at 32% 31%);
+    max-width: 700px;
 }
 
 .dish-card__title {
     font-weight: bolder;
+    color: var(--light-black);
+}
+
+.dish-card__body {
+    color: var(--light-black);
+}
+
+.dish-card__body h5 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+.dish-list {
+    display: flex;
+    flex-flow: wrap row;
+    gap: 24px;
+}
+
+.dish-list .dish-card {
+    max-width: 270px;
+}
+
+.dish-card__title a {
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 700;
 }
