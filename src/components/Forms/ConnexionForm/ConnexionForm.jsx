@@ -2,7 +2,6 @@ import './ConnexionForm.css';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
 import { UserContext } from '../../../model/utils/context/UserContext';
-import { auth } from '../../../firebase.config'
 
 
 export default function ConnexionForm() {

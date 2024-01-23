@@ -26,6 +26,7 @@ import Sitemap from "../../pages/Sitemap";
 
 import { UserContext } from "../../model/utils/context/UserContext";
 import { useContext } from "react";
+import OrderValidated from "../../pages/OrderValidated";
 
 
 
@@ -80,6 +81,7 @@ export default function Main() {
 					<Route path="/dish/:id" element={<DishPage />} />
 					<Route path='/cart' element={<CartPage />} />
 					<Route path='/sitemap' element={<Sitemap />} />
+					<Route path='/order-validation' element={<OrderValidated />} />
 
 
 

@@ -1,25 +1,21 @@
 import './ConnexionForm.css';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useRef, useState } from 'react';
-import { UserContext } from '../../../model/utils/context/UserContext';
-import { auth } from '../../../firebase.config'
+import { CartContext } from '../../../model/utils/context/UserContext';
 
 
 export default function OrderValidationForm() {
 
+	const navigate = useNavigate()
+	const { cartState } = useContext(CartContext)
+
+	const formRef = useRef()
 	const inputs = useRef([])
 	const [validation, setValidation] = useState("")
-	const { user, signIn, logOut } = useContext(UserContext)
-	const navigate = useNavigate()
 
-	function handleLogOut() {
-		logOut()
-		navigate("/")
-	}
 
 	function resetAll() {
 		inputs.current = []
-		console.log(inputs.current)
 	}
 
 	const addInputs = el => {
@@ -27,7 +23,6 @@ export default function OrderValidationForm() {
 			inputs.current.push(el)
 		}
 	}
-	const formRef = useRef()
 
 	const handleForm = async (e) => {
 		e.preventDefault()
