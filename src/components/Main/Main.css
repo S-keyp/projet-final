@@ -22,6 +22,25 @@
     gap: 24px;
 }
 
+.site-nav-admin {
+    position: relative;
+}
+
+.site-nav-admin ul {
+    display: none;
+    position: absolute;
+    background-color: var(--green);
+    margin: 0;
+    text-align: left;
+}
+.site-nav-admin ul a {
+    padding: 6px 12px;
+}
+
+.site-nav-admin:hover ul {
+    display: block;
+}
+
 .header {
     background: url('/header-wallpaper-1.jpg') bottom / cover fixed no-repeat;
     filter: contrast(50%);

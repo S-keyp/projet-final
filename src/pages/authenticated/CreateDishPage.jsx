@@ -9,6 +9,7 @@ export default function CreateDishPage() {
 		"servings": null,
 		"difficulty": null,
 		"cuisine": null,
+		"mealType": null,
 	}
 
 

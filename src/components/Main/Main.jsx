@@ -50,11 +50,11 @@ function Nav() {
 					<Link to="/cart">Cart 🛒</Link>
 				</li>
 				{ user && (
-					<li>
+					<li className="site-nav-admin">
 							Administration
 						<ul>
 							<li><Link to="/admin/home">Stock</Link></li>
-							<li><Link to="/admin/create-dish">Add a dish</Link></li>
+							<li><Link to="/admin/create-dish">Add&nbsp;a&nbsp;dish</Link></li>
 						</ul>
 					</li>
 				)}
