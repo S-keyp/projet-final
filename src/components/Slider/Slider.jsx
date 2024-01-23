@@ -16,12 +16,11 @@ export default function Slider() {
 	return (
 
 		<Swiper
-			// loop={true}
+			loop={true}
 			speed={500}
-			// autoplay={{
-			// 	delay: 8000,
-			// }}
-			className=""
+			autoplay={{
+				delay: 8000,
+			}}
 		>
 			{dishListState &&
 				dishListState.length > 0 &&
