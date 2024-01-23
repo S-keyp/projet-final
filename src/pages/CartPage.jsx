@@ -17,22 +17,43 @@ export default function CartPage() {
 				</section>
 			) : (
 				<>
-					<div className="cart">
-						<ul className="cart-list">
+
+					<section className="section cart">
+						<table className="cart-list">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Full Prep Time</th>
+									<th>Difficulty</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
+							<tbody>
 							{
 								cartState.map(function (elt, index) {
 									return (
-										<li className='cart-list-element' key={index}>
-											{elt.name}
-											<button onClick={() => removeFromCart(index)}>
-												Remove
-											</button>
-										</li>
+										<tr className='cart-list-element' key={index}>
+											<td>
+												{elt.name}
+											</td>
+											<td className="">
+												{ (elt.prepTimeMinutes + elt.cookTimeMinutes).toString() + " Min" }
+											</td>
+											<td className="">
+												{ elt.difficulty }
+											</td>
+											<td>
+												<button onClick={() => removeFromCart(index)}>
+													Remove
+												</button>
+											</td>
+										</tr>
 									)
 								})
 							}
-						</ul>
-					</div>
+							</tbody>
+						</table>
+					</section>
 					<OrderValidationForm />
 				</>
 			)}

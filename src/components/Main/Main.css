@@ -188,3 +188,9 @@ ul {
 .tag:first-of-type {
     margin-left: 0;
 }
+
+
+.cart-list {
+    width: 100%;
+    text-align: center;
+}
