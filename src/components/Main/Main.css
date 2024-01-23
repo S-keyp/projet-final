@@ -2,19 +2,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    background: var(--green);
+    height: 60px;
+    background: var(--black);
     border-radius: 25px;
     margin: 24px auto 12px;
 }
+
 .site-navigation a {
     display: block;
     color: var(--light);
     padding: 0 24px;
 }
 
-.site-navigation__logo {
-    float: left;
+a.site-navigation__logo {
+    display: flex;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+}
+a.site-navigation__logo svg{
+    width: 40px;
+    fill: white;
+}
+a.site-navigation__logo:hover svg{
+    fill: var(--orange);
 }
 
 .site-navigation ul {
@@ -29,7 +40,6 @@
 .site-nav-admin ul {
     display: none;
     position: absolute;
-    background-color: var(--green);
     margin: 0;
     text-align: left;
 }
@@ -43,13 +53,41 @@
 
 .header {
     background: url('/header-wallpaper-1.jpg') bottom / cover fixed no-repeat;
-    filter: contrast(50%);
+    font-size: 2em;
     margin-bottom: 48px;
+    text-align: left;
+    box-shadow: inset 350px 220px 220px 20px  var(--black);
+}
+
+.homepage .header__title {
+    backdrop-filter: blur(1px);
+    padding: 60px 250px  150px;
+    font-size: 2em;
+    color: var(--light);
 }
 
 .header__title {
-    padding: 12.5vh;
-    color: #f9fafd;
+    backdrop-filter: blur(1px);
+    padding: 60px 140px 150px;
+    min-height: 200px;
+    font-size: 2em;
+    color: var(--light);
+}
+
+.homepage .header__title span {
+    font-size: 1.5em;
+    position: relative;
+}
+
+.header svg {
+    position: absolute;
+    top: -0.05em;
+    left: -1.6em;
+    width: 240px;
+}
+
+.word2 {
+    padding-left: 80px;
 }
 
 .section {
