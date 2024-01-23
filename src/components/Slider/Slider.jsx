@@ -19,7 +19,7 @@ export default function Slider() {
 			loop={true}
 			speed={500}
 			autoplay={{
-				delay: 8000,
+				delay: 5000,
 			}}
 		>
 			{dishListState &&
