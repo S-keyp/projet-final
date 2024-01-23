@@ -1,6 +1,4 @@
-
-
-function PresentationPage() {
+export default function PresentationPage() {
   return <div className="presentation-page">
     <header className="header">
         <h1 className="header__title">About Gourmet Fusion Bistro</h1>
@@ -45,5 +43,3 @@ function PresentationPage() {
     </footer>
   </div>
 };
-
-export default PresentationPage;

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './Main.css';
 
-import ConnexionBox from '../ConnexionBox/ConnexionBox';
+import ConnexionForm from '../Forms/ConnexionForm/ConnexionForm';
 import CartPage from '../../pages/CartPage'
 import DishPage from '../../pages/DishPage'
 import DishListPage from '../../pages/DishListPage'
@@ -113,7 +113,7 @@ export default function Main() {
 							<Link to="/sitemap">Sitemap</Link>
 						</li>
 						<li>
-							<ConnexionBox />
+							<ConnexionForm	 />
 						</li>
 					</ul>
 				</footer>

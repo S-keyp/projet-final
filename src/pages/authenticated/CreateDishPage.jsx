@@ -1,4 +1,4 @@
-import DishForm from '../../components/DishForm/DishForm'
+import DishForm from '../../components/Forms/DishForm/DishForm'
 
 export default function CreateDishPage() {
 	let dish = {
