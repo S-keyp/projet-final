@@ -2,7 +2,7 @@
     position: relative;
     height: 450px;
     text-align: left;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 .slide img {
