@@ -6,7 +6,7 @@ import { DishListContext } from '../../model/utils/context/index';
 
 import NotFound from "../NotFound";
 
-function DishPage() {
+export default function DishPage() {
 	const id = Number(useParams().id)
 	const { DishListState } = useContext(DishListContext)
 
@@ -15,5 +15,3 @@ function DishPage() {
 	if (!dish) return <NotFound />
 	else return <DishAuth dish={dish} />
 }
-
-export default DishPage;

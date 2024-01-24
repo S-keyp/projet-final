@@ -1,7 +1,9 @@
 
 export default function NotFound() {
   return (
-    <h1>The page you are looking for does not exist</h1>
+    <section className="section">
+      <h1 className="section__subtitle">The page you are looking for does not exist</h1>
+    </section>
   )
 };
 

@@ -30,10 +30,10 @@ export default function Homepage() {
 			</header>
 
 			<section className="section">
-                <h3 className="section__subtitle">Join Us for an Unforgettable Journey</h3>
-                <p className="section__paragraph">We invite you to embark on a culinary journey with Gourmet Fusion Bistro. Indulge in the extraordinary, savor the unique, and celebrate the joy of dining at a place where every meal is an experience to remember.</p>
-                <p className="section__paragraph">Thank you for choosing Gourmet Fusion Bistro. We look forward to serving you soon!</p>
-            </section>
+				<h3 className="section__subtitle">Join Us for an Unforgettable Journey</h3>
+				<p className="section__paragraph">We invite you to embark on a culinary journey with Gourmet Fusion Bistro. Indulge in the extraordinary, savor the unique, and celebrate the joy of dining at a place where every meal is an experience to remember.</p>
+				<p className="section__paragraph">Thank you for choosing Gourmet Fusion Bistro. We look forward to serving you soon!</p>
+			</section>
 
 			<Slider />
 

@@ -4,6 +4,7 @@
     text-align: left;
     overflow: auto;
 }
+
 .slide img {
     position: absolute;
     top: -70%;
@@ -13,7 +14,7 @@
     box-shadow: 55px 20px 30px -30px var(--black);
 }
 
-.slide > *:not(img) {
+.slide>*:not(img) {
     margin-left: 60%;
     width: fit-content;
 }

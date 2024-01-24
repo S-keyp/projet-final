@@ -33,7 +33,7 @@ export default function DishForm({ dish }) {
 		dish.difficulty = difficulty.current.value
 		dish.cuisine = cuisine.current.value
 		dish.mealType = mealType.current.value.split(',')
-		
+
 		createOrUpdateDish(dish)
 	}
 

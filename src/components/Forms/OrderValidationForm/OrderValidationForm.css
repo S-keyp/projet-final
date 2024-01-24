@@ -10,11 +10,11 @@
     justify-content: space-between;
 }
 
-.order-form-row div > *:not(p) {
+.order-form-row div>*:not(p) {
     margin: 12px auto;
 }
 
-.order-form-row div > input {
+.order-form-row div>input {
     margin-left: 12px;
 }
 

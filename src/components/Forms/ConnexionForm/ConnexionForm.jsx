@@ -66,7 +66,7 @@ export default function ConnexionForm() {
 						<div className="sign-in-field">
 							<label htmlFor="signInEmail">
 								Email
-							</label><br/>
+							</label><br />
 							<input
 								ref={addInputs}
 								name='email'
@@ -80,7 +80,7 @@ export default function ConnexionForm() {
 						<div className="sign-in-field">
 							<label htmlFor="signInPwd">
 								Password
-							</label><br/>
+							</label><br />
 							<input
 								ref={addInputs}
 								name='pwd'

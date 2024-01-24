@@ -12,7 +12,7 @@ function DishPage() {
 	const [dish, setDish] = useState()
 
 	useEffect(() => {
-		if(dishListState) setDish(dishListState.find(dish => dish.id == id))
+		if (dishListState) setDish(dishListState.find(dish => dish.id == id))
 	}, [dishListState])
 
 	return (
