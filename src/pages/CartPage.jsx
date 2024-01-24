@@ -29,32 +29,34 @@ export default function CartPage() {
 								</tr>
 							</thead>
 							<tbody>
-							{
-								cartState.map(function (elt, index) {
-									return (
-										<tr className='cart-list-element' key={index}>
-											<td>
-												{elt.name}
-											</td>
-											<td className="">
-												{ (elt.prepTimeMinutes + elt.cookTimeMinutes).toString() + " Min" }
-											</td>
-											<td className="">
-												{ elt.difficulty }
-											</td>
-											<td>
-												<button onClick={() => removeFromCart(index)}>
-													Remove
-												</button>
-											</td>
-										</tr>
-									)
-								})
-							}
+								{
+									cartState.map(function (elt, index) {
+										return (
+											<tr className='cart-list-element' key={index}>
+												<td>
+													{elt.name}
+												</td>
+												<td className="">
+													{(elt.prepTimeMinutes + elt.cookTimeMinutes).toString() + " Min"}
+												</td>
+												<td className="">
+													{elt.difficulty}
+												</td>
+												<td>
+													<button onClick={() => removeFromCart(index)}>
+														Remove
+													</button>
+												</td>
+											</tr>
+										)
+									})
+								}
 							</tbody>
 						</table>
 					</section>
-					<OrderValidationForm />
+					<section className="section">
+						<OrderValidationForm />
+					</section>
 				</>
 			)}
 		</>
