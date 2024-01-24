@@ -16,16 +16,20 @@ function DishPage() {
 	}, [dishListState])
 
 	return (
-		<>
+		<div className="dish-page">
+
 			{
 				dishListState &&
 					dish ? (
-					<Dish dish={dish} />
+					<section className="section">
+						<Dish dish={dish} />
+					</section>
+
 				) : (
 					<NotFound />
 				)
 			}
-		</>
+		</div>
 	)
 }
 

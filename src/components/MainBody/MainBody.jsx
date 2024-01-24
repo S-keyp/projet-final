@@ -4,7 +4,7 @@ import {
 	Route,
 	Link,
 } from "react-router-dom";
-import './Main.css';
+import './MainBody.css';
 
 import ConnexionForm from '../Forms/ConnexionForm/ConnexionForm';
 import CartPage from '../../pages/CartPage'
@@ -70,7 +70,7 @@ function Nav() {
 };
 
 
-export default function Main() {
+export default function MainBody() {
 
 	return (
 		<div className="main">

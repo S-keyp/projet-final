@@ -1,7 +1,7 @@
 import DishListProvider from './model/utils/context/DishListContext'
 import CartContextProvider from './model/utils/context/CartContext'
 import UserContextProvider from './model/utils/context/UserContext'
-import Main from './components/Main/Main'
+import MainBody from './components/MainBody/MainBody'
 import './App.css'
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
 					<CartContextProvider>
 
-						<Main />
+						<MainBody />
 
 					</CartContextProvider>
 

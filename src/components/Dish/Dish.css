@@ -21,11 +21,16 @@
 
 .dish-card__body {
     color: var(--light-black);
+    display: flex;
 }
 
 .dish-card__body h5 {
     font-size: 1.2em;
     font-weight: 500;
+}
+
+.dish-card__instructions {
+    display: none;
 }
 
 
@@ -43,4 +48,15 @@
     color: var(--black);
     font-size: 1.2em;
     font-weight: 700;
+}
+
+.dish-page .dish-card {
+    border: none;
+}
+
+.dish-page .dish-card .dish-card__instructions{
+    display: block;
+    padding-left: 60px;
+    margin-left: 60px;
+    border-left: 1px solid var(--black);
 }

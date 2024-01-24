@@ -17,10 +17,18 @@ export default function Dish({ dish }) {
 			</h5>
 
 			<div className="dish-card__body">
-				<h5>Ingredients:</h5>
-				<ul className='dish-card__list'>
-					{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient.replace(',', ' ~')}</li>)}
-				</ul>
+				<div>
+					<h5>Ingredients:</h5>
+					<ul className='dish-card__list'>
+						{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient.replace(',', ' ~')}</li>)}
+					</ul>
+				</div>
+				<div className="dish-card__instructions">
+					<h5>Instructions:</h5>
+					<ul className='dish-card__list'>
+						{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient.replace(',', ' ~')}</li>)}
+					</ul>
+				</div>
 			</div>
 
 			<button onClick={() => addToCart(dish)} className='dish-card__action'>Add +</button>
