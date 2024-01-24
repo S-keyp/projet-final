@@ -1,8 +1,8 @@
-###npm i
+### npm i
 ---
-###npm run dev
+### npm run dev
 ---
-###Id de connexion firebase:
+### Id de connexion firebase:
 ---
 mail: azer@azer.com
 ---
