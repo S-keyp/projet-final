@@ -150,7 +150,7 @@ a.site-navigation__logo:hover svg {
     justify-content: center;
     gap: 450px;
     align-items: center;
-    background: url('footer-background.png') center /cover no-repeat;
+    background: url('/footer-background.png') center /cover no-repeat;
     height: 400px;
     margin-bottom: 24px;
 }
