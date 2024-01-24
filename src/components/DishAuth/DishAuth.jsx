@@ -12,7 +12,7 @@ export default function DishAuth({ dish, onDeleteDish }) {
 				{dish.cuisine}
 			</td>
 			<td>
-				{dish.mealType.map((meal, index) => <span key={index}>{meal}</span>)}
+				{dish.mealType.map((meal, index) => <span className='tag-light' key={index}>{meal} </span>)}
 			</td>
 			<td>
 				{

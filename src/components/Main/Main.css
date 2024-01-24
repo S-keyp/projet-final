@@ -188,6 +188,16 @@ ul {
     margin: 0 6px;
 }
 
+.tag-light {
+    display: inline-flex;
+    padding: 5px 10px;
+    background: var(--light-black);
+    color: var(--light);
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0 6px;
+}
+
 .tag:first-of-type {
     margin-left: 0;
 }
@@ -196,4 +206,33 @@ ul {
 table {
     width: 100%;
     text-align: center;
+    border-collapse: separate;
+    border-spacing: 12px;
+}
+
+th {
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+input {
+    border: 1px solid var(--light-black);
+    border-radius: 3px;
+}
+
+.gestion-controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+    align-items: center;
+    margin: 24px auto;
+    border-bottom: 2px solid var(--light-black);
+}
+
+.gestion-controls div span{
+    margin-left: 24px;
+}
+
+.gestion-controls div span button{
+    margin: 12px 24px;
 }

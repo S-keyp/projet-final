@@ -10,9 +10,9 @@ export default function AdminPage() {
 
 	return (
 		<>
-			<div className="">
-				<h1>Admin page:</h1>
-				<div className="">
+			<div className="section">
+				<h1 className="section__subtitle">Stock gestion:</h1>
+				<div className="gestion-controls">
 					<div className="">
 						Sort by name:
 						<span>
@@ -31,6 +31,7 @@ export default function AdminPage() {
 						<button className="add-dish">Add a dish</button>
 					</Link>
 				</div>
+				
 				<table className="">
 					<thead>
 						<tr>
