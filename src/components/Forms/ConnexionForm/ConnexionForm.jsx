@@ -85,7 +85,7 @@ export default function ConnexionForm() {
 								ref={addInputs}
 								name='pwd'
 								required
-								type='passwrod'
+								type='password'
 								className=''
 								id='signUpPwd'
 							/>
