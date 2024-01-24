@@ -22,6 +22,7 @@
 .dish-card__body {
     color: var(--light-black);
     display: flex;
+    justify-content: space-between;
 }
 
 .dish-card__body h5 {
@@ -55,8 +56,8 @@
 }
 
 .dish-page .dish-card .dish-card__instructions{
-    display: block;
-    padding-left: 60px;
-    margin-left: 60px;
-    border-left: 1px solid var(--black);
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    gap: 10px;
 }

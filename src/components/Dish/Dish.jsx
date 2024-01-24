@@ -26,8 +26,20 @@ export default function Dish({ dish }) {
 				<div className="dish-card__instructions">
 					<h5>Instructions:</h5>
 					<ul className='dish-card__list'>
-						{dish.ingredients.map((ingredient, index) => <li key={index}>{ingredient.replace(',', ' ~')}</li>)}
+						{dish.instructions.map((instruction, index) => <li key={index}>{instruction}</li>)}
 					</ul>
+				</div>
+				<div className="dish-card__instructions ">
+					<h5>Preparation Time:</h5>
+					<p>{dish.prepTimeMinutes} Min</p>
+					<h5>Cook Time:</h5>
+					<p>{dish.cookTimeMinutes} Min</p>
+					<h5>Serving:</h5>
+					<p>{dish.servings} Person</p>
+					<h5>Tags:</h5>
+					<p>
+						{dish.tags.map((tag, index) => <span className='tag' key={index}>{tag}</span>)}
+					</p>
 				</div>
 			</div>
 
