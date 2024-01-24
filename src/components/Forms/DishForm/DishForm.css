@@ -1,1 +1,7 @@
-.BookForm {}
+.create-dish {
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 48px auto;
+    gap: 24px;
+}

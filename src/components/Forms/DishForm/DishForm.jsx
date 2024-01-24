@@ -1,3 +1,4 @@
+import './DishForm.css'
 import { useNavigate } from "react-router-dom";
 import { useContext, useRef } from "react";
 
@@ -45,7 +46,7 @@ export default function DishForm({ dish }) {
 
 			<div>
 				<label htmlFor="ingredients">Ingredients:</label>
-				<input defaultValue={ingredients.current} ref={ingredients} id="ingredients" name="ingredients" type="text" />
+				<input defaultValue={ingredients.current} ref={ingredients} title="Separate each ingredient with a coma" id="ingredients" name="ingredients" type="text" />
 			</div>
 
 			<div>
@@ -73,7 +74,7 @@ export default function DishForm({ dish }) {
 			</div>
 			<div>
 				<label htmlFor="mealType">Meal type:</label>
-				<input defaultValue={mealType.current} ref={mealType} id="mealType" name="mealType" type="text" />
+				<input defaultValue={mealType.current} ref={mealType} title="Separate each meal with a coma" id="mealType" name="mealType" type="text" />
 			</div>
 
 			<button onClick={() => {

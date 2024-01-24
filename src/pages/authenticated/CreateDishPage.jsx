@@ -15,8 +15,9 @@ export default function CreateDishPage() {
 
 
 	return (
-		<div className="create-dish-page">
+		<section className="section">
+			<h2 className='section__subtitle'>Create a dish</h2>
 			<DishForm dish={dish} />
-		</div>
+		</section>
 	)
 }

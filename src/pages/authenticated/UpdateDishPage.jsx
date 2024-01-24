@@ -10,9 +10,10 @@ export default function UpdateDishPage() {
 	const [dish, setDish] = useState(dishListState.find(dish => dish.id === id));
 
 	return (
-		<div className="update-dish-page">
+		<section className="section">
+			<h2 className="section__subtitle">Update a dish</h2>
 			<DishForm dish={dish} />
-		</div>
+		</section>
 	)
 
 }

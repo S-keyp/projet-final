@@ -12,9 +12,9 @@ export default function OrderValidated () {
     },[])
 
     return (
-        <>
-            <h2>Thanks for your order !</h2>
-            <p>Everything is validated and you will soon be redirected to the homepage</p>
-        </>
+            <section className="section">
+                <h2 className="section__subtitle">Thanks for your order !</h2>
+                <p className="section__paragraph">Everything is validated and you will soon be redirected to the homepage</p>
+            </section>
     )
 }
